@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "port_scanner", "port_scanner\port_scanner.csproj", "{AC0C8D3A-2075-45F3-84EE-ED3AC96CCF7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lying_NTP", "..\Lying_NTP\Lying_NTP\Lying_NTP.csproj", "{D515F9F1-7B00-4330-BCE9-B33DFD14C14B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AC0C8D3A-2075-45F3-84EE-ED3AC96CCF7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC0C8D3A-2075-45F3-84EE-ED3AC96CCF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC0C8D3A-2075-45F3-84EE-ED3AC96CCF7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D515F9F1-7B00-4330-BCE9-B33DFD14C14B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D515F9F1-7B00-4330-BCE9-B33DFD14C14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D515F9F1-7B00-4330-BCE9-B33DFD14C14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D515F9F1-7B00-4330-BCE9-B33DFD14C14B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lying_NTP\Lying_NTP\Lying_NTP.csproj">
+      <Project>{D515F9F1-7B00-4330-BCE9-B33DFD14C14B}</Project>
+      <Name>Lying_NTP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

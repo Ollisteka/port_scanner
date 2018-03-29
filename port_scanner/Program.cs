@@ -9,7 +9,8 @@ namespace port_scanner
 	{
 		private static void Main(string[] args)
 		{
-			var ips = new List<IPAddress> {IPAddress.Loopback, IPAddress.Parse("10.97.135.51")};
+            // IPAddress.Parse("10.97.135.51"),
+            var ips = new List<IPAddress> { IPAddress.Parse("80.83.248.25"), IPAddress.Loopback };
 			var left = GetPortAsInput("Left edge:");
 			var right = GetPortAsInput("Right edge:");
 			Console.WriteLine();
