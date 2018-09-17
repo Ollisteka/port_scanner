@@ -12,8 +12,8 @@ namespace port_scanner
 {
     public class Scanner
     {
-        readonly string[] names = new[] { "IP", "Port", "Result", "Type" };
-        const string Format = "{0,-13} {1,-8} {2, -10} {3, -8}\n";
+        readonly string[] names = { "IP", "Port", "Result", "Type" };
+        const string Format = "{0,-15} {1,-8} {2, -10} {3, -8}\n";
         public void Scan(List<IPAddress> ips, List<int> ports)
         {
             Console.WriteLine(Format, names);
@@ -51,7 +51,7 @@ namespace port_scanner
 
         public async Task<PortStatus> ChechUdpPort(IPAddress ip, int port)
         {
-            var data = new byte[8];
+            var data = new byte[48];
             var ipEndPoint = new IPEndPoint(ip, port);
 
             using (var udpClient = new UdpClient())
@@ -68,6 +68,8 @@ namespace port_scanner
                         Console.WriteLine(Encoding.ASCII.GetString(receiveTask.Result.Buffer));
                         return PortStatus.Closed;
                     }
+
+                  //  Console.WriteLine(receiveTask.Status);
                     return PortStatus.Open;
                 }
                 catch (Exception e)
@@ -89,8 +91,11 @@ namespace port_scanner
                     case TaskStatus.RanToCompletion:
                         return PortStatus.Open;
                     case TaskStatus.Faulted:
+                        Console.WriteLine($"TCP port is closed, because: {connectTask.Exception?.InnerException?.Message}");
+                        Console.WriteLine();
                         return PortStatus.Closed;
                     default:
+                        Console.WriteLine("State of the TCP port is unknown, because it timed out!");
                         return PortStatus.Unknown;
                 }
             }
